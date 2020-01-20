@@ -2,10 +2,11 @@
 
 require_relative '../lib/move.rb'
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts("Welcome to Tic Tac Toe!")
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts("Where would you like to go?")
-user_input = gets.to_i
-puts("you have selected #{user_input}")
-board[user_input-1] = "X"
+input = gets.to_i
+index = input_to_index(input)
+puts("index = #{{index}}")
+update_array_at_with(board, index, "X")
 display_board(board)
