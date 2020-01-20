@@ -7,6 +7,6 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts("Where would you like to go?")
 input = gets.to_i
 index = input_to_index(input)
-puts("index = #{{index}}")
+puts("index = #{index}")
 update_array_at_with(board, index, "X")
 display_board(board)
